@@ -1,0 +1,160 @@
+/* ─── 1) Light/Dark Variables ─────────────────────────────────────────── */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  --bg: #f8f9fa;
+  --fg: #212529;
+  --surface: #ffffff;
+  --muted: #6c757d;
+  --primary: #0062cc;
+  --primary-hover: #004a9f;
+  --border: #dee2e6;
+  --error: #dc3545;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #121418;
+  --fg: #e9ecef;
+  --surface: #1e2125;
+  --muted: #adb5bd;
+  --primary: #339af0;
+  --primary-hover: #1c7ed6;
+  --border: #343a40;
+  --error: #ff6b6b;
+  color-scheme: dark;
+}
+
+/* ─── 2) Form Fixes ───────────────────────────────────────────────────── */
+.form-control,
+.form-select {
+  background-color: var(--surface) !important;
+  color: var(--fg) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Placeholder text */
+.form-control::placeholder,
+.form-select:invalid {
+  color: var(--muted) !important;
+  opacity: 0.7 !important;
+}
+
+/* Dropdown options */
+.form-select option {
+  background-color: var(--surface) !important;
+  color: var(--fg) !important;
+}
+
+/* Required asterisk */
+.form-label::after {
+  content: " *";
+  color: var(--error) !important;
+  margin-left: 2px;
+}
+
+/* Error messages */
+.invalid-feedback {
+  color: var(--error) !important;
+}
+
+/* Force dark mode inputs */
+[data-theme="dark"] {
+  .form-control, 
+  .form-select,
+  .form-control::placeholder {
+    background-color: var(--surface) !important;
+    color: var(--fg) !important;
+  }
+}
+
+/* ─── 3) Full CSS Reset ───────────────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+}
+
+/* ─── 4) Navbar/Button Fixes ──────────────────────────────────────────── */
+.navbar {
+  background-color: var(--surface) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+/* ===== DARK MODE ENHANCEMENTS ===== */
+[data-theme="dark"] {
+  /* Hero Section */
+  .bg-light {
+    background-color: var(--surface) !important;
+  }
+  
+  /* Testimonial Cards */
+  .card {
+    background-color: var(--surface);
+    border-color: var(--border);
+  }
+  
+  /* Why Choose Us Icons */
+  .bi {
+    color: var(--primary) !important;
+  }
+
+  /* Customer Quotes */
+  .fst-italic {
+    color: var(--muted) !important;
+  }
+
+  /* Form Section */
+  .bg-primary.bg-opacity-10 {
+    background-color: rgba(var(--primary-rgb), 0.08) !important;
+  }
+
+  /* Footer */
+  footer.bg-dark {
+    background-color: var(--surface) !important;
+    border-top: 1px solid var(--border);
+  }
+}
+
+/* ===== GLOBAL IMPROVEMENTS ===== */
+/* Text Contrast */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--fg) !important;
+}
+
+/* Testimonial Images */
+.rounded-circle {
+  border: 2px solid var(--primary) !important;
+  padding: 2px;
+}
+
+/* Section Backgrounds */
+section:not(.bg-light):not(.bg-primary) {
+  background-color: var(--bg);
+}
+
+/* Why Choose Us Tiles */
+#why-choose-us .col-md-4 {
+  background-color: var(--surface);
+  border-radius: 0.5rem;
+  padding: 1.5rem !important;
+  margin: 0.5rem;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* Button Hover Effects */
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
+}
