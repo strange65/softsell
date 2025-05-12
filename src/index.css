@@ -1,4 +1,4 @@
-/* ─── 1) Light/Dark Variables ─────────────────────────────────────────── */
+/* 1) Light/Dark Variables  */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -25,7 +25,7 @@
   color-scheme: dark;
 }
 
-/* ─── 2) Form Fixes ───────────────────────────────────────────────────── */
+
 .form-control,
 .form-select {
   background-color: var(--surface) !important;
@@ -92,7 +92,7 @@ body {
   background-color: var(--primary) !important;
   border-color: var(--primary) !important;
 }
-/* ===== DARK MODE ENHANCEMENTS ===== */
+/* DARK MODE ENHANCEMENTS*/
 [data-theme="dark"] {
   /* Hero Section */
   .bg-light {
